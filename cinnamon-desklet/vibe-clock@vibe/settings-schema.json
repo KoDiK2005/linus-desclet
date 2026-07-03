@@ -31,6 +31,18 @@
         "description": "Оформление: Аниме",
         "dependency": "style=anime"
     },
+    "anime-character": {
+        "type": "combobox",
+        "default": "sakura",
+        "description": "Персонаж",
+        "dependency": "style=anime",
+        "options": {
+            "Сакура (твинтейлы)": "sakura",
+            "Луна (кошачьи ушки)": "luna",
+            "Мико (каре, кимоно)": "miko",
+            "Юки (хвост, очки)": "yuki"
+        }
+    },
     "anime-accent-color": {
         "type": "colorchooser",
         "default": "#ff6ec7",

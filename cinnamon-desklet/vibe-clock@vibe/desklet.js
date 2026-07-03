@@ -20,10 +20,15 @@ const MONTHS_SHORT_RU = ["ЯНВ", "ФЕВ", "МАР", "АПР", "МАЙ", "ИЮ
 
 // Every style is described declaratively here so adding a new one
 // doesn't require touching the build/apply logic below.
+const ANIME_CHARACTERS = ["sakura", "luna", "miko", "yuki"];
+
 const STYLES = {
     anime: {
         prefix: "anime",
-        icon: "sprite.svg",
+        icon: function (self) {
+            let character = ANIME_CHARACTERS.indexOf(self._anime_character) !== -1 ? self._anime_character : "sakura";
+            return "sprite-" + character + ".svg";
+        },
         boxClass: "anime-box",
         iconClass: "anime-icon",
         decorClass: "anime-decor",
@@ -81,7 +86,7 @@ const ANIME_ONLY_KEYS = ["glow-color", "date-color", "bg-color"];
 const IMAGE_STYLE_ONLY_KEYS = ["time-color"];
 
 function buildSettingsKeys() {
-    let keys = ["style", "use24h", "show-seconds"];
+    let keys = ["style", "use24h", "show-seconds", "anime-character"];
     Object.keys(STYLES).forEach(function (styleName) {
         let style = STYLES[styleName];
         let extra = style.generatedBackground ? ANIME_ONLY_KEYS : IMAGE_STYLE_ONLY_KEYS;
@@ -131,26 +136,32 @@ VibeClockDesklet.prototype = {
         return this["_" + prefix + "_" + suffix.replace(/-/g, "_")];
     },
 
+    _resolveIcon: function (def) {
+        return typeof def.icon === "function" ? def.icon(this) : def.icon;
+    },
+
     _applySettings: function () {
         let style = STYLES[this._style] ? this._style : "anime";
+        let iconPath = this._resolveIcon(STYLES[style]);
 
-        if (style !== this._builtStyle) {
-            this._buildStyleUI(style);
+        if (style !== this._builtStyle || iconPath !== this._builtIconPath) {
+            this._buildStyleUI(style, iconPath);
             this._builtStyle = style;
+            this._builtIconPath = iconPath;
         }
 
         this._applyTheme(style);
         this._update(style);
     },
 
-    _buildStyleUI: function (style) {
+    _buildStyleUI: function (style, iconPath) {
         this._pulseToken++;
         this._root.destroy_all_children();
 
         let def = STYLES[style];
 
         this._icon = new St.Icon({
-            gicon: new Gio.FileIcon({ file: Gio.File.new_for_path(this.metadata.path + "/" + def.icon) }),
+            gicon: new Gio.FileIcon({ file: Gio.File.new_for_path(this.metadata.path + "/" + iconPath) }),
             style_class: def.iconClass
         });
         this._clockBox = new St.BoxLayout({ vertical: true });

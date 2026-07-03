@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 240" width="220" height="240">
+  <defs>
+    <radialGradient id="glowM" cx="50%" cy="38%" r="65%">
+      <stop offset="0%" stop-color="#ffb066" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#ffb066" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hairM" x1="0%" y1="0%" x2="20%" y2="100%">
+      <stop offset="0%" stop-color="#ff9a5c"/>
+      <stop offset="45%" stop-color="#f2622a"/>
+      <stop offset="100%" stop-color="#b3350f"/>
+    </linearGradient>
+    <linearGradient id="irisM" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffcf8a"/>
+      <stop offset="60%" stop-color="#f2903f"/>
+      <stop offset="100%" stop-color="#a84a10"/>
+    </linearGradient>
+    <linearGradient id="kimono" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fef4ec"/>
+      <stop offset="100%" stop-color="#ffd9c2"/>
+    </linearGradient>
+    <radialGradient id="skinShadeM" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <ellipse cx="110" cy="118" rx="100" ry="118" fill="url(#glowM)"/>
+
+  <g fill="#fff0dd" opacity="0.9">
+    <path d="M26 64 l4 9 l9 4 l-9 4 l-4 9 l-4 -9 l-9 -4 l9 -4 Z"/>
+    <path d="M192 56 l3 6 l6 3 l-6 3 l-3 6 l-3 -6 l-6 -3 l6 -3 Z"/>
+    <circle cx="34" cy="128" r="2.6"/>
+  </g>
+
+  <!-- short bob back layer -->
+  <path d="M44 96 C 30 118, 30 150, 44 172 C 54 158, 56 132, 52 108 Z" fill="url(#hairM)"/>
+  <path d="M176 96 C 190 118, 190 150, 176 172 C 166 158, 164 132, 168 108 Z" fill="url(#hairM)"/>
+
+  <!-- shoulders / kimono collar -->
+  <path d="M38 206 Q110 244 182 206 L182 240 L38 240 Z" fill="#8a2116"/>
+  <path d="M64 196 L108 220 L100 240 L54 240 Z" fill="url(#kimono)"/>
+  <path d="M156 196 L112 220 L120 240 L166 240 Z" fill="url(#kimono)"/>
+  <path d="M100 216 L120 216 L128 240 L92 240 Z" fill="#e0473a"/>
+
+  <!-- neck -->
+  <path d="M94 178 L126 178 L124 202 Q110 210 96 202 Z" fill="#ffe3ef"/>
+
+  <!-- head -->
+  <circle cx="110" cy="118" r="64" fill="#ffe3ef"/>
+  <ellipse cx="110" cy="100" rx="60" ry="50" fill="url(#skinShadeM)"/>
+
+  <!-- ears blush -->
+  <circle cx="76" cy="128" r="10" fill="#ff9d6b" opacity="0.5"/>
+  <circle cx="144" cy="128" r="10" fill="#ff9d6b" opacity="0.5"/>
+
+  <!-- eyebrows -->
+  <path d="M70 90 Q82 83 94 89" stroke="#8a2f0f" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M126 89 Q138 83 150 90" stroke="#8a2f0f" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- left eye: open -->
+  <g>
+    <path d="M66 108 Q72 94 92 97 Q104 100 101 116 Q92 130 76 126 Q66 122 66 108 Z" fill="url(#irisM)"/>
+    <path d="M64 106 Q70 90 94 94" stroke="#5c2408" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+    <ellipse cx="90" cy="105" rx="6.5" ry="9" fill="#5c2408"/>
+    <circle cx="87" cy="100" r="4.2" fill="#ffffff"/>
+    <circle cx="96" cy="114" r="2.2" fill="#ffffff" opacity="0.9"/>
+  </g>
+
+  <!-- right eye: winking -->
+  <path d="M118 106 Q132 116 146 106" stroke="#5c2408" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+  <path d="M126 112 l3 4 M136 112 l-3 4" stroke="#5c2408" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- nose + playful smile -->
+  <path d="M110 122 q2 4 -1 7" stroke="#e8a97e" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <path d="M98 135 Q110 146 122 133" stroke="#c9502f" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+  <path d="M101 138 Q110 143 119 137" fill="#ffffff"/>
+
+  <!-- blush -->
+  <ellipse cx="78" cy="132" rx="10" ry="6" fill="#ff9d6b" opacity="0.5"/>
+  <ellipse cx="142" cy="132" rx="10" ry="6" fill="#ff9d6b" opacity="0.5"/>
+
+  <!-- bob bangs -->
+  <path d="M46 98 C 42 50 74 20 110 20 C 146 20 178 50 174 98
+           C 162 78 150 90 138 80 C 128 90 118 76 110 84
+           C 102 76 92 90 82 80 C 70 90 58 78 46 98 Z" fill="url(#hairM)"/>
+  <path d="M46 98 C 38 110 36 126 40 140 C 46 126 50 112 56 102 Z" fill="url(#hairM)"/>
+  <path d="M174 98 C 182 110 184 126 180 140 C 174 126 170 112 164 102 Z" fill="url(#hairM)"/>
+  <path d="M58 42 C 74 24 96 18 110 18" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.4" stroke-linecap="round"/>
+
+  <!-- flower hair ornament -->
+  <g transform="translate(146,52)">
+    <circle cx="0" cy="-7" r="5" fill="#ff8fb0"/>
+    <circle cx="6" cy="-2" r="5" fill="#ff8fb0"/>
+    <circle cx="4" cy="6" r="5" fill="#ff8fb0"/>
+    <circle cx="-4" cy="6" r="5" fill="#ff8fb0"/>
+    <circle cx="-6" cy="-2" r="5" fill="#ff8fb0"/>
+    <circle cx="0" cy="0" r="4" fill="#ffe37a"/>
+  </g>
+</svg>
