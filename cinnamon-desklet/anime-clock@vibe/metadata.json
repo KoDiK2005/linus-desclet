@@ -1,0 +1,9 @@
+{
+    "uuid": "anime-clock@vibe",
+    "name": "Anime Vibe Clock",
+    "description": "Neon anime/vaporwave-style clock and date desklet.",
+    "version": "1.0",
+    "max-instances": "1",
+    "prevent-decorations": true,
+    "author": "vibe"
+}

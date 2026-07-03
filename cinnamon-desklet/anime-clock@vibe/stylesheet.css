@@ -1,0 +1,23 @@
+.anime-clock-box {
+    border-radius: 18px;
+    padding: 14px 22px;
+    spacing: 4px;
+}
+
+.anime-clock-decor {
+    font-size: 11px;
+    color: #9be7ff;
+    text-align: center;
+}
+
+.anime-clock-time {
+    font-family: "Comic Sans MS", "Verdana", sans-serif;
+    font-weight: bold;
+    padding: 4px 0px;
+}
+
+.anime-clock-date {
+    font-family: "Verdana", sans-serif;
+    font-size: 15px;
+    padding-bottom: 2px;
+}
