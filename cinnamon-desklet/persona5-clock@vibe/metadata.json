@@ -1,0 +1,9 @@
+{
+    "uuid": "persona5-clock@vibe",
+    "name": "Persona 5 Style Clock",
+    "description": "High-contrast red/black/white clock and date desklet, styled after Persona 5's UI.",
+    "version": "1.0",
+    "max-instances": "1",
+    "prevent-decorations": true,
+    "author": "vibe"
+}

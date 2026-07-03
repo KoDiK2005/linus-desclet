@@ -1,0 +1,39 @@
+.p5-clock-box {
+    background-image: url("background.svg");
+    min-width: 420px;
+    min-height: 190px;
+    border-radius: 4px;
+    padding: 18px 26px;
+    spacing: 18px;
+}
+
+.p5-mask {
+    icon-shadow: 0px 0px 8px #e6161a;
+}
+
+.p5-decor {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #e6161a;
+    text-align: center;
+}
+
+.p5-time {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    color: #ffffff;
+    text-shadow: 2px 2px 0px #e6161a;
+    padding: 2px 0px;
+}
+
+.p5-date {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: #e6161a;
+    text-shadow: 1px 1px 0px #000000;
+}

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" width="440" height="220">
+  <defs>
+    <pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.4" fill="#ffffff" opacity="0.9"/>
+    </pattern>
+    <clipPath id="frame">
+      <rect x="0" y="0" width="440" height="220" rx="4"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <rect x="0" y="0" width="440" height="220" fill="#0a0a0a"/>
+
+    <!-- torn red diagonal bands -->
+    <polygon points="-40,40 120,-40 170,-40 -40,110" fill="#e6161a"/>
+    <polygon points="300,240 460,60 460,120 340,240" fill="#e6161a"/>
+    <polygon points="-40,150 90,240 40,240 -40,190" fill="#e6161a"/>
+
+    <!-- thin white jagged accent lines -->
+    <polyline points="-20,60 60,10 90,10 10,70" fill="none" stroke="#ffffff" stroke-width="2"/>
+    <polyline points="320,230 420,110 420,140 350,230" fill="none" stroke="#ffffff" stroke-width="2"/>
+
+    <!-- halftone dot corner -->
+    <polygon points="440,0 440,90 380,0" fill="url(#dots)" opacity="0.5"/>
+    <polygon points="0,220 90,220 0,160" fill="url(#dots)" opacity="0.4"/>
+
+    <!-- big translucent watermark number -->
+    <text x="352" y="185" font-family="Impact, Arial Black, sans-serif" font-size="150"
+          fill="#ffffff" opacity="0.06" font-style="italic">5</text>
+
+    <!-- corner border frame -->
+    <path d="M6 6 L60 6 M6 6 L6 60" stroke="#ffffff" stroke-width="3" fill="none"/>
+    <path d="M434 214 L380 214 M434 214 L434 160" stroke="#ffffff" stroke-width="3" fill="none"/>
+  </g>
+
+  <rect x="2" y="2" width="436" height="216" rx="4" fill="none" stroke="#e6161a" stroke-width="2"/>
+</svg>
