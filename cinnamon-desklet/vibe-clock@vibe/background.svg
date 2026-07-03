@@ -1,8 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" width="440" height="220">
   <defs>
+    <linearGradient id="band" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff3540"/>
+      <stop offset="100%" stop-color="#b40d14"/>
+    </linearGradient>
     <pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse">
       <circle cx="2" cy="2" r="1.4" fill="#ffffff" opacity="0.9"/>
     </pattern>
+    <radialGradient id="vignette" cx="50%" cy="45%" r="75%">
+      <stop offset="60%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.55"/>
+    </radialGradient>
     <clipPath id="frame">
       <rect x="0" y="0" width="440" height="220" rx="4"/>
     </clipPath>
@@ -12,25 +20,31 @@
     <rect x="0" y="0" width="440" height="220" fill="#0a0a0a"/>
 
     <!-- torn red diagonal bands -->
-    <polygon points="-40,40 120,-40 170,-40 -40,110" fill="#e6161a"/>
-    <polygon points="300,240 460,60 460,120 340,240" fill="#e6161a"/>
-    <polygon points="-40,150 90,240 40,240 -40,190" fill="#e6161a"/>
+    <polygon points="-40,40 120,-40 170,-40 -40,110" fill="url(#band)"/>
+    <polygon points="300,240 460,60 460,120 340,240" fill="url(#band)"/>
+    <polygon points="-40,150 90,240 40,240 -40,190" fill="url(#band)"/>
 
     <!-- thin white jagged accent lines -->
     <polyline points="-20,60 60,10 90,10 10,70" fill="none" stroke="#ffffff" stroke-width="2"/>
     <polyline points="320,230 420,110 420,140 350,230" fill="none" stroke="#ffffff" stroke-width="2"/>
+    <polyline points="150,-10 130,20" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.7"/>
 
     <!-- halftone dot corner -->
     <polygon points="440,0 440,90 380,0" fill="url(#dots)" opacity="0.5"/>
     <polygon points="0,220 90,220 0,160" fill="url(#dots)" opacity="0.4"/>
+    <polygon points="440,220 440,170 400,220" fill="url(#dots)" opacity="0.3"/>
 
     <!-- big translucent watermark number -->
-    <text x="352" y="185" font-family="Impact, Arial Black, sans-serif" font-size="150"
-          fill="#ffffff" opacity="0.06" font-style="italic">5</text>
+    <text x="350" y="188" font-family="sans-serif" font-size="150"
+          fill="#ffffff" opacity="0.07" font-style="italic" font-weight="bold">5</text>
 
     <!-- corner border frame -->
     <path d="M6 6 L60 6 M6 6 L6 60" stroke="#ffffff" stroke-width="3" fill="none"/>
     <path d="M434 214 L380 214 M434 214 L434 160" stroke="#ffffff" stroke-width="3" fill="none"/>
+    <path d="M10 10 L44 10 M10 10 L10 44" stroke="#e6161a" stroke-width="1.5" fill="none"/>
+    <path d="M430 210 L396 210 M430 210 L430 176" stroke="#e6161a" stroke-width="1.5" fill="none"/>
+
+    <rect x="0" y="0" width="440" height="220" fill="url(#vignette)"/>
   </g>
 
   <rect x="2" y="2" width="436" height="216" rx="4" fill="none" stroke="#e6161a" stroke-width="2"/>

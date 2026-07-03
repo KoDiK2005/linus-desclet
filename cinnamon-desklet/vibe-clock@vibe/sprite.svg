@@ -5,16 +5,34 @@
       <stop offset="100%" stop-color="#ff9be0" stop-opacity="0"/>
     </radialGradient>
     <linearGradient id="hair" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#c07bff"/>
-      <stop offset="100%" stop-color="#7a3cff"/>
+      <stop offset="0%" stop-color="#d59bff"/>
+      <stop offset="55%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#6d28d9"/>
     </linearGradient>
     <linearGradient id="dress" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#ff6ec7"/>
+      <stop offset="0%" stop-color="#ff8ad4"/>
       <stop offset="100%" stop-color="#c93fb0"/>
     </linearGradient>
+    <radialGradient id="eye" cx="40%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#3a1c5c"/>
+    </radialGradient>
+    <radialGradient id="shadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1a0630" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#1a0630" stop-opacity="0"/>
+    </radialGradient>
   </defs>
 
   <ellipse cx="100" cy="120" rx="95" ry="110" fill="url(#glow)"/>
+
+  <!-- sparkles -->
+  <g fill="#ffe6f7" opacity="0.9">
+    <path d="M30 55 l4 10 l10 4 l-10 4 l-4 10 l-4 -10 l-10 -4 l10 -4 Z"/>
+    <path d="M172 40 l3 7 l7 3 l-7 3 l-3 7 l-3 -7 l-7 -3 l7 -3 Z"/>
+  </g>
+
+  <!-- ground shadow -->
+  <ellipse cx="100" cy="242" rx="34" ry="7" fill="url(#shadow)"/>
 
   <!-- back twin-tails -->
   <path d="M40 95 C 5 110, 0 170, 20 205 C 30 185, 40 165, 45 140 Z" fill="url(#hair)"/>
@@ -44,6 +62,7 @@
   <path d="M48 80 C 44 40, 76 14, 100 14 C 124 14, 156 40, 152 80 C 140 60, 128 74, 118 62 C 108 74, 96 62, 88 72 C 78 60, 62 62, 48 80 Z" fill="url(#hair)"/>
   <path d="M46 78 C 30 95, 30 118, 40 132 C 44 110, 48 96, 54 84 Z" fill="url(#hair)"/>
   <path d="M154 78 C 170 95, 170 118, 160 132 C 156 110, 152 96, 146 84 Z" fill="url(#hair)"/>
+  <path d="M58 46 C 70 28, 88 20, 100 20" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.35" stroke-linecap="round"/>
 
   <!-- ribbon -->
   <path d="M132 46 l14 -10 l-2 12 l10 6 l-14 4 l2 12 l-14 -12 Z" fill="#ff2fb0"/>
@@ -54,12 +73,13 @@
   <circle cx="130" cy="98" r="9" fill="#ff9bd0" opacity="0.6"/>
 
   <!-- eyes -->
-  <ellipse cx="80" cy="90" rx="9" ry="12" fill="#3a1c5c"/>
-  <ellipse cx="120" cy="90" rx="9" ry="12" fill="#3a1c5c"/>
+  <ellipse cx="80" cy="90" rx="9" ry="12" fill="url(#eye)"/>
+  <ellipse cx="120" cy="90" rx="9" ry="12" fill="url(#eye)"/>
+  <path d="M70 82 l-6 -5 M129 82 l6 -5" stroke="#3a1c5c" stroke-width="2" stroke-linecap="round"/>
   <circle cx="83" cy="85" r="3" fill="#ffffff"/>
   <circle cx="123" cy="85" r="3" fill="#ffffff"/>
-  <circle cx="78" cy="94" r="2" fill="#a239ff"/>
-  <circle cx="118" cy="94" r="2" fill="#a239ff"/>
+  <circle cx="78" cy="94" r="1.6" fill="#ffffff" opacity="0.8"/>
+  <circle cx="118" cy="94" r="1.6" fill="#ffffff" opacity="0.8"/>
 
   <!-- mouth -->
   <path d="M94 108 Q100 113 106 108" stroke="#c9538a" stroke-width="2" fill="none" stroke-linecap="round"/>

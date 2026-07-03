@@ -2,9 +2,13 @@ const Desklet = imports.ui.desklet;
 const St = imports.gi.St;
 const Gio = imports.gi.Gio;
 const GLib = imports.gi.GLib;
+const Clutter = imports.gi.Clutter;
 const Lang = imports.lang;
 const Mainloop = imports.mainloop;
 const Settings = imports.ui.settings;
+
+const PULSE_MIN_OPACITY = 165;
+const PULSE_DURATION_MS = 1600;
 
 const WEEKDAYS_FULL_RU = ["воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"];
 const MONTHS_FULL_RU = ["января", "февраля", "марта", "апреля", "мая", "июня",
@@ -72,6 +76,7 @@ VibeClockDesklet.prototype = {
     },
 
     _buildStyleUI: function (style) {
+        this._pulseToken = (this._pulseToken || 0) + 1;
         this._root.destroy_all_children();
 
         if (style === "persona5") {
@@ -113,6 +118,24 @@ VibeClockDesklet.prototype = {
             this._root.add(this._spriteIcon, { y_align: St.Align.MIDDLE });
             this._root.add(this._clockBox, { y_align: St.Align.MIDDLE });
         }
+
+        this._startPulse(this._timeLabel, this._pulseToken);
+    },
+
+    _startPulse: function (actor, token) {
+        let pulseOut = true;
+        Mainloop.timeout_add(PULSE_DURATION_MS, Lang.bind(this, function () {
+            if (token !== this._pulseToken) return GLib.SOURCE_REMOVE;
+
+            actor.ease({
+                opacity: pulseOut ? PULSE_MIN_OPACITY : 255,
+                duration: PULSE_DURATION_MS,
+                mode: Clutter.AnimationMode.EASE_IN_OUT_SINE
+            });
+            pulseOut = !pulseOut;
+
+            return GLib.SOURCE_CONTINUE;
+        }));
     },
 
     _applyAnimeTheme: function () {
@@ -232,6 +255,7 @@ VibeClockDesklet.prototype = {
     },
 
     on_desklet_removed: function () {
+        this._pulseToken = (this._pulseToken || 0) + 1;
         if (this._timeoutId) {
             Mainloop.source_remove(this._timeoutId);
         }
