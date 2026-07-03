@@ -9,7 +9,9 @@
         "description": "Стиль оформления",
         "options": {
             "Аниме": "anime",
-            "Persona 5": "persona5"
+            "Persona 5": "persona5",
+            "Persona 4": "persona4",
+            "Persona 3": "persona3"
         }
     },
     "use24h": {
@@ -53,20 +55,20 @@
         "description": "Цвет фона",
         "dependency": "style=anime"
     },
-    "anime-show-sprite": {
+    "anime-show-icon": {
         "type": "checkbox",
         "default": true,
-        "description": "Показывать спрайт персонажа",
+        "description": "Показывать персонажа",
         "dependency": "style=anime"
     },
-    "anime-sprite-size": {
+    "anime-icon-size": {
         "type": "spinbutton",
-        "default": 120,
+        "default": 140,
         "min": 60,
-        "max": 240,
+        "max": 260,
         "step": 4,
         "units": "px",
-        "description": "Размер спрайта",
+        "description": "Размер персонажа",
         "dependency": "style=anime"
     },
     "anime-time-font-size": {
@@ -92,30 +94,30 @@
         "dependency": "style=anime"
     },
 
-    "persona-section": {
+    "persona5-section": {
         "type": "header",
         "description": "Оформление: Persona 5",
         "dependency": "style=persona5"
     },
-    "persona-accent-color": {
+    "persona5-accent-color": {
         "type": "colorchooser",
         "default": "#e6161a",
         "description": "Акцентный красный цвет",
         "dependency": "style=persona5"
     },
-    "persona-time-color": {
+    "persona5-time-color": {
         "type": "colorchooser",
         "default": "#ffffff",
         "description": "Цвет времени",
         "dependency": "style=persona5"
     },
-    "persona-show-mask": {
+    "persona5-show-icon": {
         "type": "checkbox",
         "default": true,
         "description": "Показывать маску",
         "dependency": "style=persona5"
     },
-    "persona-mask-size": {
+    "persona5-icon-size": {
         "type": "spinbutton",
         "default": 100,
         "min": 50,
@@ -125,7 +127,7 @@
         "description": "Размер маски",
         "dependency": "style=persona5"
     },
-    "persona-time-font-size": {
+    "persona5-time-font-size": {
         "type": "spinbutton",
         "default": 42,
         "min": 16,
@@ -135,16 +137,128 @@
         "description": "Размер шрифта часов",
         "dependency": "style=persona5"
     },
-    "persona-top-decor": {
+    "persona5-top-decor": {
         "type": "entry",
         "default": "PHANTOM THIEVES",
         "description": "Верхняя надпись-декор",
         "dependency": "style=persona5"
     },
-    "persona-bottom-decor": {
+    "persona5-bottom-decor": {
         "type": "entry",
         "default": "TAKE YOUR TIME",
         "description": "Нижняя надпись-декор",
         "dependency": "style=persona5"
+    },
+
+    "persona4-section": {
+        "type": "header",
+        "description": "Оформление: Persona 4",
+        "dependency": "style=persona4"
+    },
+    "persona4-accent-color": {
+        "type": "colorchooser",
+        "default": "#ffe14d",
+        "description": "Акцентный жёлтый цвет",
+        "dependency": "style=persona4"
+    },
+    "persona4-time-color": {
+        "type": "colorchooser",
+        "default": "#ffffff",
+        "description": "Цвет времени",
+        "dependency": "style=persona4"
+    },
+    "persona4-show-icon": {
+        "type": "checkbox",
+        "default": true,
+        "description": "Показывать телевизор",
+        "dependency": "style=persona4"
+    },
+    "persona4-icon-size": {
+        "type": "spinbutton",
+        "default": 100,
+        "min": 50,
+        "max": 200,
+        "step": 4,
+        "units": "px",
+        "description": "Размер телевизора",
+        "dependency": "style=persona4"
+    },
+    "persona4-time-font-size": {
+        "type": "spinbutton",
+        "default": 42,
+        "min": 16,
+        "max": 96,
+        "step": 2,
+        "units": "px",
+        "description": "Размер шрифта часов",
+        "dependency": "style=persona4"
+    },
+    "persona4-top-decor": {
+        "type": "entry",
+        "default": "MIDNIGHT CHANNEL",
+        "description": "Верхняя надпись-декор",
+        "dependency": "style=persona4"
+    },
+    "persona4-bottom-decor": {
+        "type": "entry",
+        "default": "INVESTIGATION TEAM",
+        "description": "Нижняя надпись-декор",
+        "dependency": "style=persona4"
+    },
+
+    "persona3-section": {
+        "type": "header",
+        "description": "Оформление: Persona 3",
+        "dependency": "style=persona3"
+    },
+    "persona3-accent-color": {
+        "type": "colorchooser",
+        "default": "#c9a227",
+        "description": "Акцентный золотой цвет",
+        "dependency": "style=persona3"
+    },
+    "persona3-time-color": {
+        "type": "colorchooser",
+        "default": "#eef2ff",
+        "description": "Цвет времени",
+        "dependency": "style=persona3"
+    },
+    "persona3-show-icon": {
+        "type": "checkbox",
+        "default": true,
+        "description": "Показывать маску",
+        "dependency": "style=persona3"
+    },
+    "persona3-icon-size": {
+        "type": "spinbutton",
+        "default": 100,
+        "min": 50,
+        "max": 200,
+        "step": 4,
+        "units": "px",
+        "description": "Размер маски",
+        "dependency": "style=persona3"
+    },
+    "persona3-time-font-size": {
+        "type": "spinbutton",
+        "default": 42,
+        "min": 16,
+        "max": 96,
+        "step": 2,
+        "units": "px",
+        "description": "Размер шрифта часов",
+        "dependency": "style=persona3"
+    },
+    "persona3-top-decor": {
+        "type": "entry",
+        "default": "S.E.E.S.",
+        "description": "Верхняя надпись-декор",
+        "dependency": "style=persona3"
+    },
+    "persona3-bottom-decor": {
+        "type": "entry",
+        "default": "MEMENTO MORI",
+        "description": "Нижняя надпись-декор",
+        "dependency": "style=persona3"
     }
 }

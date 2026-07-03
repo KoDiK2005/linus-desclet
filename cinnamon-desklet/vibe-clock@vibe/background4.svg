@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" width="440" height="220">
+  <defs>
+    <linearGradient id="p4Band" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffe14d"/>
+      <stop offset="100%" stop-color="#e0ac00"/>
+    </linearGradient>
+    <pattern id="p4Scan" width="10" height="4" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="10" height="1.6" fill="#ffe14d" opacity="0.5"/>
+    </pattern>
+    <radialGradient id="p4Vignette" cx="50%" cy="45%" r="75%">
+      <stop offset="55%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.55"/>
+    </radialGradient>
+    <clipPath id="p4Frame">
+      <rect x="0" y="0" width="440" height="220" rx="4"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#p4Frame)">
+    <rect x="0" y="0" width="440" height="220" fill="#0c0c0c"/>
+
+    <!-- torn yellow diagonal bands -->
+    <polygon points="-40,30 130,-40 175,-40 -40,95" fill="url(#p4Band)"/>
+    <polygon points="310,240 460,70 460,125 350,240" fill="url(#p4Band)"/>
+
+    <!-- static scanline strip -->
+    <rect x="0" y="95" width="440" height="34" fill="url(#p4Scan)" opacity="0.5"/>
+
+    <!-- jagged white accent -->
+    <polyline points="-20,55 55,10 85,10 15,60" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.85"/>
+    <polyline points="325,225 415,115 415,145 355,225" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.85"/>
+
+    <!-- corner frame -->
+    <path d="M6 6 L58 6 M6 6 L6 58" stroke="#ffffff" stroke-width="3" fill="none"/>
+    <path d="M434 214 L382 214 M434 214 L434 162" stroke="#ffffff" stroke-width="3" fill="none"/>
+    <path d="M10 10 L42 10 M10 10 L10 42" stroke="#ffe14d" stroke-width="1.5" fill="none"/>
+    <path d="M430 210 L398 210 M430 210 L430 178" stroke="#ffe14d" stroke-width="1.5" fill="none"/>
+
+    <!-- watermark eye -->
+    <circle cx="355" cy="165" r="46" fill="#ffe14d" opacity="0.06"/>
+    <circle cx="355" cy="165" r="20" fill="#ffe14d" opacity="0.09"/>
+
+    <rect x="0" y="0" width="440" height="220" fill="url(#p4Vignette)"/>
+  </g>
+
+  <rect x="2" y="2" width="436" height="216" rx="4" fill="none" stroke="#ffe14d" stroke-width="2"/>
+</svg>

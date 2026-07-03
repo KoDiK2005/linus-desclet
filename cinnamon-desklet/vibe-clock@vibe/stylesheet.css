@@ -1,30 +1,30 @@
 /* Anime style */
 
-.anime-clock-box {
+.anime-box {
     border-radius: 18px;
     padding: 14px 24px;
     spacing: 18px;
 }
 
-.anime-clock-sprite {
+.anime-icon {
     icon-shadow: 0px 0px 14px #ff6ec7;
 }
 
-.anime-clock-decor {
+.anime-decor {
     font-family: "Ubuntu", sans-serif;
     font-size: 11px;
     color: #9be7ff;
     text-align: center;
 }
 
-.anime-clock-time {
+.anime-time {
     font-family: "Ubuntu", sans-serif;
     font-weight: bold;
     letter-spacing: 1px;
     padding: 4px 0px;
 }
 
-.anime-clock-date {
+.anime-date {
     font-family: "Ubuntu", sans-serif;
     font-size: 15px;
     padding-bottom: 2px;
@@ -32,7 +32,7 @@
 
 /* Persona 5 style */
 
-.p5-clock-box {
+.p5-box {
     background-image: url("background.svg");
     min-width: 420px;
     min-height: 190px;
@@ -41,7 +41,7 @@
     spacing: 20px;
 }
 
-.p5-mask {
+.p5-icon {
     icon-shadow: 0px 0px 10px #e6161a;
 }
 
@@ -66,5 +66,79 @@
     font-weight: bold;
     font-size: 13px;
     letter-spacing: 1.5px;
+    text-shadow: 1px 1px 0px #000000;
+}
+
+/* Persona 4 style */
+
+.p4-box {
+    background-image: url("background4.svg");
+    min-width: 420px;
+    min-height: 190px;
+    border-radius: 4px;
+    padding: 18px 28px;
+    spacing: 20px;
+}
+
+.p4-icon {
+    icon-shadow: 0px 0px 10px #ffe14d;
+}
+
+.p4-decor {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: bold;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.p4-time {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 2px 0px;
+}
+
+.p4-date {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-shadow: 1px 1px 0px #000000;
+}
+
+/* Persona 3 style */
+
+.p3-box {
+    background-image: url("background3.svg");
+    min-width: 420px;
+    min-height: 190px;
+    border-radius: 4px;
+    padding: 18px 28px;
+    spacing: 20px;
+}
+
+.p3-icon {
+    icon-shadow: 0px 0px 10px #c9a227;
+}
+
+.p3-decor {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.p3-time {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: normal;
+    letter-spacing: 2px;
+    padding: 2px 0px;
+}
+
+.p3-date {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 13px;
+    letter-spacing: 2px;
     text-shadow: 1px 1px 0px #000000;
 }

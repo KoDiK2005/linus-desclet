@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <linearGradient id="p3MaskGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3d5aa8"/>
+      <stop offset="100%" stop-color="#0e1a3d"/>
+    </linearGradient>
+    <linearGradient id="p3Gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f5e08a"/>
+      <stop offset="100%" stop-color="#c9a227"/>
+    </linearGradient>
+    <radialGradient id="p3Shadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <ellipse cx="80" cy="130" rx="56" ry="9" fill="url(#p3Shadow)"/>
+
+  <g transform="rotate(-6 80 80)">
+    <path d="M22 68 C22 36 48 20 80 20 C112 20 138 36 138 68
+             C138 92 120 98 108 90 C102 98 90 102 80 98
+             C70 102 58 98 52 90 C40 98 22 92 22 68 Z"
+          fill="url(#p3MaskGrad)" stroke="url(#p3Gold)" stroke-width="3"/>
+
+    <!-- crescent moon on forehead -->
+    <path d="M80 32 a10 10 0 1 0 0.1 0 a7.5 7.5 0 1 1 -0.1 0 Z" fill="url(#p3Gold)"/>
+
+    <!-- eye cutouts -->
+    <path d="M34 64 C34 50 48 40 64 42 C72 43 76 52 70 60 C62 70 42 74 34 64 Z" fill="#060a1a"/>
+    <path d="M126 64 C126 50 112 40 96 42 C88 43 84 52 90 60 C98 70 118 74 126 64 Z" fill="#060a1a"/>
+
+    <!-- thin gold tear -->
+    <path d="M104 62 L110 96" stroke="url(#p3Gold)" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
+    <circle cx="110" cy="99" r="2.4" fill="url(#p3Gold)" opacity="0.85"/>
+
+    <path d="M68 56 C74 50 86 50 92 56" stroke="#060a1a" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+
+    <path d="M22 68 C12 82 14 102 32 106" stroke="url(#p3Gold)" stroke-width="2" fill="none"/>
+    <path d="M138 68 C148 82 146 102 128 106" stroke="url(#p3Gold)" stroke-width="2" fill="none"/>
+
+    <path d="M80 98 L80 114" stroke="url(#p3Gold)" stroke-width="2"/>
+  </g>
+</svg>
