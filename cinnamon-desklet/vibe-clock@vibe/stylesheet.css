@@ -1,3 +1,36 @@
+/* Anime style */
+
+.anime-clock-box {
+    border-radius: 18px;
+    padding: 14px 22px;
+    spacing: 16px;
+}
+
+.anime-clock-sprite {
+    icon-shadow: 0px 0px 10px #ff6ec7;
+}
+
+.anime-clock-decor {
+    font-family: sans-serif;
+    font-size: 11px;
+    color: #9be7ff;
+    text-align: center;
+}
+
+.anime-clock-time {
+    font-family: sans-serif;
+    font-weight: bold;
+    padding: 4px 0px;
+}
+
+.anime-clock-date {
+    font-family: sans-serif;
+    font-size: 15px;
+    padding-bottom: 2px;
+}
+
+/* Persona 5 style */
+
 .p5-clock-box {
     background-image: url("background.svg");
     min-width: 420px;
@@ -16,7 +49,6 @@
     font-weight: bold;
     font-size: 11px;
     letter-spacing: 1px;
-    color: #e6161a;
     text-align: center;
 }
 
@@ -24,8 +56,6 @@
     font-family: sans-serif;
     font-weight: bold;
     font-style: italic;
-    color: #ffffff;
-    text-shadow: 2px 2px 0px #e6161a;
     padding: 2px 0px;
 }
 
@@ -34,6 +64,5 @@
     font-weight: bold;
     font-size: 13px;
     letter-spacing: 1px;
-    color: #e6161a;
     text-shadow: 1px 1px 0px #000000;
 }
