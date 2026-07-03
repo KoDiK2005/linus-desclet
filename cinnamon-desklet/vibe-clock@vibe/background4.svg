@@ -7,6 +7,11 @@
     <pattern id="p4Scan" width="10" height="4" patternUnits="userSpaceOnUse">
       <rect x="0" y="0" width="10" height="1.6" fill="#ffe14d" opacity="0.5"/>
     </pattern>
+    <pattern id="p4Static" width="6" height="6" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="6" height="6" fill="#000000"/>
+      <rect x="0" y="0" width="3" height="3" fill="#ffe14d" opacity="0.5"/>
+      <rect x="3" y="3" width="3" height="3" fill="#ffffff" opacity="0.3"/>
+    </pattern>
     <radialGradient id="p4Vignette" cx="50%" cy="45%" r="75%">
       <stop offset="55%" stop-color="#000000" stop-opacity="0"/>
       <stop offset="100%" stop-color="#000000" stop-opacity="0.55"/>
@@ -19,12 +24,19 @@
   <g clip-path="url(#p4Frame)">
     <rect x="0" y="0" width="440" height="220" fill="#0c0c0c"/>
 
+    <!-- static snow patch behind watermark -->
+    <circle cx="340" cy="150" r="70" fill="url(#p4Static)" opacity="0.12"/>
+
     <!-- torn yellow diagonal bands -->
     <polygon points="-40,30 130,-40 175,-40 -40,95" fill="url(#p4Band)"/>
     <polygon points="310,240 460,70 460,125 350,240" fill="url(#p4Band)"/>
 
-    <!-- static scanline strip -->
+    <!-- static scanline strip with VHS colour-fringe glitch -->
     <rect x="0" y="95" width="440" height="34" fill="url(#p4Scan)" opacity="0.5"/>
+    <rect x="40" y="100" width="140" height="3" fill="#4de0ff" opacity="0.45"/>
+    <rect x="46" y="104" width="140" height="3" fill="#ff4d9e" opacity="0.4"/>
+    <rect x="240" y="116" width="120" height="3" fill="#4de0ff" opacity="0.4"/>
+    <rect x="232" y="120" width="120" height="3" fill="#ff4d9e" opacity="0.35"/>
 
     <!-- jagged white accent -->
     <polyline points="-20,55 55,10 85,10 15,60" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.85"/>
@@ -36,9 +48,10 @@
     <path d="M10 10 L42 10 M10 10 L10 42" stroke="#ffe14d" stroke-width="1.5" fill="none"/>
     <path d="M430 210 L398 210 M430 210 L430 178" stroke="#ffe14d" stroke-width="1.5" fill="none"/>
 
-    <!-- watermark eye -->
-    <circle cx="355" cy="165" r="46" fill="#ffe14d" opacity="0.06"/>
-    <circle cx="355" cy="165" r="20" fill="#ffe14d" opacity="0.09"/>
+    <!-- stylized eye watermark -->
+    <ellipse cx="352" cy="160" rx="52" ry="30" fill="none" stroke="#ffe14d" stroke-width="2" opacity="0.12"/>
+    <circle cx="352" cy="160" r="16" fill="#ffe14d" opacity="0.1"/>
+    <circle cx="352" cy="160" r="6" fill="#ffe14d" opacity="0.16"/>
 
     <rect x="0" y="0" width="440" height="220" fill="url(#p4Vignette)"/>
   </g>

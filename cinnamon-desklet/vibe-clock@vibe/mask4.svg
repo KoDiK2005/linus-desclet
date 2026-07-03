@@ -12,9 +12,14 @@
       <stop offset="0%" stop-color="#1a1a1a"/>
       <stop offset="100%" stop-color="#050505"/>
     </linearGradient>
+    <radialGradient id="p4Glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffe14d" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#ffe14d" stop-opacity="0"/>
+    </radialGradient>
   </defs>
 
   <ellipse cx="80" cy="134" rx="52" ry="9" fill="url(#p4Shadow)"/>
+  <circle cx="80" cy="76" r="58" fill="url(#p4Glow)"/>
 
   <g transform="rotate(-5 80 78)">
     <!-- antennae -->
@@ -27,19 +32,26 @@
     <rect x="24" y="30" width="112" height="86" rx="14" fill="url(#p4Yellow)"/>
     <rect x="34" y="40" width="92" height="66" rx="8" fill="url(#p4Screen)"/>
 
+    <!-- glitch offset slice -->
+    <rect x="34" y="46" width="92" height="8" fill="#0d0d0d"/>
+    <rect x="30" y="46" width="20" height="8" fill="#1a1a1a"/>
+
     <!-- static scanlines -->
     <g stroke="#ffe14d" stroke-width="2" opacity="0.55">
-      <line x1="38" y1="52" x2="122" y2="52"/>
-      <line x1="38" y1="60" x2="100" y2="60"/>
-      <line x1="50" y1="68" x2="122" y2="68"/>
-      <line x1="38" y1="76" x2="90" y2="76"/>
-      <line x1="60" y1="84" x2="122" y2="84"/>
-      <line x1="38" y1="92" x2="110" y2="92"/>
+      <line x1="38" y1="58" x2="122" y2="58"/>
+      <line x1="38" y1="66" x2="100" y2="66"/>
+      <line x1="50" y1="74" x2="122" y2="74"/>
+      <line x1="38" y1="82" x2="90" y2="82"/>
+      <line x1="60" y1="90" x2="122" y2="90"/>
+      <line x1="38" y1="98" x2="110" y2="98"/>
     </g>
 
     <!-- glitch eye -->
-    <circle cx="80" cy="73" r="13" fill="#ffe14d" opacity="0.9"/>
-    <circle cx="80" cy="73" r="6" fill="#050505"/>
+    <circle cx="80" cy="76" r="13" fill="#ffe14d" opacity="0.9"/>
+    <circle cx="80" cy="76" r="6" fill="#050505"/>
+
+    <!-- rec dot -->
+    <circle cx="118" cy="48" r="3.2" fill="#ff3b3b"/>
 
     <!-- knobs -->
     <circle cx="118" cy="122" r="6" fill="#1a1a1a"/>

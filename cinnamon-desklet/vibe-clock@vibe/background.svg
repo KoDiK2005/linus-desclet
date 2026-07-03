@@ -4,12 +4,16 @@
       <stop offset="0%" stop-color="#ff3540"/>
       <stop offset="100%" stop-color="#b40d14"/>
     </linearGradient>
-    <pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse">
+    <pattern id="dots" width="9" height="9" patternUnits="userSpaceOnUse">
       <circle cx="2" cy="2" r="1.4" fill="#ffffff" opacity="0.9"/>
     </pattern>
     <radialGradient id="vignette" cx="50%" cy="45%" r="75%">
-      <stop offset="60%" stop-color="#000000" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#000000" stop-opacity="0.55"/>
+      <stop offset="55%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.6"/>
+    </radialGradient>
+    <radialGradient id="burstGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff3540" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ff3540" stop-opacity="0"/>
     </radialGradient>
     <clipPath id="frame">
       <rect x="0" y="0" width="440" height="220" rx="4"/>
@@ -19,24 +23,38 @@
   <g clip-path="url(#frame)">
     <rect x="0" y="0" width="440" height="220" fill="#0a0a0a"/>
 
-    <!-- torn red diagonal bands -->
-    <polygon points="-40,40 120,-40 170,-40 -40,110" fill="url(#band)"/>
-    <polygon points="300,240 460,60 460,120 340,240" fill="url(#band)"/>
+    <!-- faint impact burst behind everything -->
+    <circle cx="330" cy="110" r="120" fill="url(#burstGlow)"/>
+    <g stroke="#ff3540" stroke-width="2" opacity="0.25">
+      <line x1="330" y1="20" x2="330" y2="60"/>
+      <line x1="330" y1="160" x2="330" y2="200"/>
+      <line x1="240" y1="110" x2="280" y2="110"/>
+      <line x1="380" y1="110" x2="420" y2="110"/>
+      <line x1="266" y1="46" x2="292" y2="72"/>
+      <line x1="368" y1="148" x2="394" y2="174"/>
+      <line x1="394" y1="46" x2="368" y2="72"/>
+      <line x1="292" y1="148" x2="266" y2="174"/>
+    </g>
+
+    <!-- torn red diagonal bands with jagged inner edge -->
+    <polygon points="-40,40 90,-40 130,-40 100,-10 150,-25 170,-40 -40,120" fill="url(#band)"/>
+    <polygon points="300,240 380,150 400,175 430,140 460,150 460,120 340,240" fill="url(#band)"/>
     <polygon points="-40,150 90,240 40,240 -40,190" fill="url(#band)"/>
 
     <!-- thin white jagged accent lines -->
-    <polyline points="-20,60 60,10 90,10 10,70" fill="none" stroke="#ffffff" stroke-width="2"/>
-    <polyline points="320,230 420,110 420,140 350,230" fill="none" stroke="#ffffff" stroke-width="2"/>
+    <polyline points="-20,64 60,10 90,10 10,74" fill="none" stroke="#ffffff" stroke-width="2"/>
+    <polyline points="316,230 416,110 416,140 346,230" fill="none" stroke="#ffffff" stroke-width="2"/>
     <polyline points="150,-10 130,20" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.7"/>
+    <polyline points="20,4 44,4 8,36" fill="none" stroke="#ffffff" stroke-width="1.2" opacity="0.5"/>
 
-    <!-- halftone dot corner -->
-    <polygon points="440,0 440,90 380,0" fill="url(#dots)" opacity="0.5"/>
-    <polygon points="0,220 90,220 0,160" fill="url(#dots)" opacity="0.4"/>
-    <polygon points="440,220 440,170 400,220" fill="url(#dots)" opacity="0.3"/>
+    <!-- halftone dot texture: wider spread with fade -->
+    <polygon points="440,0 440,120 320,0" fill="url(#dots)" opacity="0.45"/>
+    <polygon points="0,220 130,220 0,140" fill="url(#dots)" opacity="0.35"/>
+    <polygon points="440,220 440,150 370,220" fill="url(#dots)" opacity="0.3"/>
 
     <!-- big translucent watermark number -->
-    <text x="350" y="188" font-family="sans-serif" font-size="150"
-          fill="#ffffff" opacity="0.07" font-style="italic" font-weight="bold">5</text>
+    <text x="330" y="185" font-family="sans-serif" font-size="165"
+          fill="#ffffff" opacity="0.08" font-style="italic" font-weight="bold">5</text>
 
     <!-- corner border frame -->
     <path d="M6 6 L60 6 M6 6 L6 60" stroke="#ffffff" stroke-width="3" fill="none"/>
