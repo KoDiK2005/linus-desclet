@@ -176,6 +176,7 @@ VibeClockDesklet.prototype = {
         this._clockBox.add(this._bottomDecor, { x_align: St.Align.MIDDLE });
 
         this._root.style_class = def.boxClass;
+        this._root.set_style(null);
         this._root.add(this._icon, { y_align: St.Align.MIDDLE });
         this._root.add(this._clockBox, { y_align: St.Align.MIDDLE });
 
