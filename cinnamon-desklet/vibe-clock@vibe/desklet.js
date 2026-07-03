@@ -86,7 +86,7 @@ const ANIME_ONLY_KEYS = ["glow-color", "date-color", "bg-color"];
 const IMAGE_STYLE_ONLY_KEYS = ["time-color"];
 
 function buildSettingsKeys() {
-    let keys = ["style", "use24h", "show-seconds", "anime-character"];
+    let keys = ["style", "use24h", "show-seconds", "enable-pulse", "anime-character"];
     Object.keys(STYLES).forEach(function (styleName) {
         let style = STYLES[styleName];
         let extra = style.generatedBackground ? ANIME_ONLY_KEYS : IMAGE_STYLE_ONLY_KEYS;
@@ -187,6 +187,13 @@ VibeClockDesklet.prototype = {
         let pulseOut = true;
         Mainloop.timeout_add(PULSE_DURATION_MS, Lang.bind(this, function () {
             if (token !== this._pulseToken) return GLib.SOURCE_REMOVE;
+
+            if (!this._enable_pulse) {
+                if (actor.opacity !== 255) {
+                    actor.ease({ opacity: 255, duration: 300, mode: Clutter.AnimationMode.EASE_OUT_QUAD });
+                }
+                return GLib.SOURCE_CONTINUE;
+            }
 
             actor.ease({
                 opacity: pulseOut ? PULSE_MIN_OPACITY : 255,

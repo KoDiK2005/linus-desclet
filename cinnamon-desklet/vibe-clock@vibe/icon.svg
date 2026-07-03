@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="iconBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c07bff"/>
+      <stop offset="100%" stop-color="#ff6ec7"/>
+    </linearGradient>
+    <radialGradient id="iconGlow" cx="50%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <circle cx="64" cy="64" r="60" fill="url(#iconBg)"/>
+  <circle cx="64" cy="64" r="60" fill="url(#iconGlow)"/>
+
+  <!-- cat-ear nod to the anime theme -->
+  <path d="M34 32 L24 10 L48 26 Z" fill="#ff6ec7"/>
+  <path d="M94 32 L104 10 L80 26 Z" fill="#ff6ec7"/>
+
+  <!-- clock face -->
+  <circle cx="64" cy="68" r="38" fill="#1c1030" stroke="#ffffff" stroke-width="3"/>
+  <circle cx="64" cy="68" r="31" fill="#2a1a45"/>
+
+  <!-- hour ticks -->
+  <g stroke="#ffe6f7" stroke-width="2.4" stroke-linecap="round" opacity="0.85">
+    <line x1="64" y1="41" x2="64" y2="46"/>
+    <line x1="64" y1="90" x2="64" y2="95"/>
+    <line x1="37" y1="68" x2="42" y2="68"/>
+    <line x1="86" y1="68" x2="91" y2="68"/>
+  </g>
+
+  <!-- hands -->
+  <line x1="64" y1="68" x2="64" y2="49" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+  <line x1="64" y1="68" x2="79" y2="68" stroke="#ff9be0" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="64" cy="68" r="4" fill="#ff2fb0"/>
+
+  <!-- sparkle -->
+  <path d="M96 36 l4 10 l10 4 l-10 4 l-4 10 l-4 -10 l-10 -4 l10 -4 Z" fill="#ffffff" opacity="0.9"/>
+</svg>

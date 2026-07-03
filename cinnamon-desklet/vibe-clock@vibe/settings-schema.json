@@ -25,6 +25,12 @@
         "default": true,
         "description": "Показывать секунды"
     },
+    "enable-pulse": {
+        "type": "checkbox",
+        "default": true,
+        "description": "Анимация свечения времени",
+        "tooltip": "Мягкое пульсирующее свечение часов. Выключите для статичного вида или экономии ресурсов."
+    },
 
     "anime-section": {
         "type": "header",

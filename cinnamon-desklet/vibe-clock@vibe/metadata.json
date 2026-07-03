@@ -2,7 +2,7 @@
     "uuid": "vibe-clock@vibe",
     "name": "Vibe Clock",
     "description": "Themeable clock and date desklet — switch between Anime, Persona 5, Persona 4 and Persona 3 styles in settings.",
-    "version": "3.0",
+    "version": "3.1",
     "max-instances": "1",
     "prevent-decorations": true,
     "author": "vibe"
