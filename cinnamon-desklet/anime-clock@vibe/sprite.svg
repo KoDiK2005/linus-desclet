@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 260" width="200" height="260">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#ff9be0" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#ff9be0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hair" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c07bff"/>
+      <stop offset="100%" stop-color="#7a3cff"/>
+    </linearGradient>
+    <linearGradient id="dress" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff6ec7"/>
+      <stop offset="100%" stop-color="#c93fb0"/>
+    </linearGradient>
+  </defs>
+
+  <ellipse cx="100" cy="120" rx="95" ry="110" fill="url(#glow)"/>
+
+  <!-- back twin-tails -->
+  <path d="M40 95 C 5 110, 0 170, 20 205 C 30 185, 40 165, 45 140 Z" fill="url(#hair)"/>
+  <path d="M160 95 C 195 110, 200 170, 180 205 C 170 185, 160 165, 155 140 Z" fill="url(#hair)"/>
+
+  <!-- legs -->
+  <rect x="78" y="196" width="14" height="34" rx="6" fill="#ffe0ef"/>
+  <rect x="108" y="196" width="14" height="34" rx="6" fill="#ffe0ef"/>
+  <rect x="74" y="224" width="22" height="14" rx="6" fill="#3a1c5c"/>
+  <rect x="104" y="224" width="22" height="14" rx="6" fill="#3a1c5c"/>
+
+  <!-- body / dress -->
+  <path d="M65 150 Q100 135 135 150 L142 205 Q100 222 58 205 Z" fill="url(#dress)"/>
+  <path d="M65 150 Q100 165 135 150 L131 168 Q100 180 69 168 Z" fill="#ffffff" opacity="0.25"/>
+
+  <!-- arms -->
+  <path d="M63 155 C 40 150, 25 130, 18 108 C 24 104, 34 104, 40 110 C 46 128, 55 145, 68 155 Z" fill="#ffe0ef"/>
+  <path d="M137 155 C 150 148, 155 138, 156 128 C 162 130, 166 138, 163 148 C 158 156, 148 160, 140 160 Z" fill="#ffe0ef"/>
+
+  <!-- neck -->
+  <rect x="92" y="118" width="16" height="14" fill="#ffe0ef"/>
+
+  <!-- head -->
+  <circle cx="100" cy="88" r="52" fill="#ffe0ef"/>
+
+  <!-- front hair -->
+  <path d="M48 80 C 44 40, 76 14, 100 14 C 124 14, 156 40, 152 80 C 140 60, 128 74, 118 62 C 108 74, 96 62, 88 72 C 78 60, 62 62, 48 80 Z" fill="url(#hair)"/>
+  <path d="M46 78 C 30 95, 30 118, 40 132 C 44 110, 48 96, 54 84 Z" fill="url(#hair)"/>
+  <path d="M154 78 C 170 95, 170 118, 160 132 C 156 110, 152 96, 146 84 Z" fill="url(#hair)"/>
+
+  <!-- ribbon -->
+  <path d="M132 46 l14 -10 l-2 12 l10 6 l-14 4 l2 12 l-14 -12 Z" fill="#ff2fb0"/>
+  <circle cx="132" cy="50" r="4" fill="#ffd1ec"/>
+
+  <!-- ears blush -->
+  <circle cx="70" cy="98" r="9" fill="#ff9bd0" opacity="0.6"/>
+  <circle cx="130" cy="98" r="9" fill="#ff9bd0" opacity="0.6"/>
+
+  <!-- eyes -->
+  <ellipse cx="80" cy="90" rx="9" ry="12" fill="#3a1c5c"/>
+  <ellipse cx="120" cy="90" rx="9" ry="12" fill="#3a1c5c"/>
+  <circle cx="83" cy="85" r="3" fill="#ffffff"/>
+  <circle cx="123" cy="85" r="3" fill="#ffffff"/>
+  <circle cx="78" cy="94" r="2" fill="#a239ff"/>
+  <circle cx="118" cy="94" r="2" fill="#a239ff"/>
+
+  <!-- mouth -->
+  <path d="M94 108 Q100 113 106 108" stroke="#c9538a" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>

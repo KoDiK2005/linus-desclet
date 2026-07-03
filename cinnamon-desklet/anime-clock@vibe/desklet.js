@@ -1,5 +1,6 @@
 const Desklet = imports.ui.desklet;
 const St = imports.gi.St;
+const Gio = imports.gi.Gio;
 const GLib = imports.gi.GLib;
 const Lang = imports.lang;
 const Mainloop = imports.mainloop;
@@ -32,7 +33,8 @@ AnimeClockDesklet.prototype = {
         this.settings = new Settings.DeskletSettings(this, this.metadata.uuid, desklet_id);
 
         let keys = ["use24h", "show-seconds", "accent-color", "glow-color",
-                    "date-color", "bg-color", "time-font-size", "top-decor", "bottom-decor"];
+                    "date-color", "bg-color", "time-font-size", "top-decor", "bottom-decor",
+                    "show-sprite", "sprite-size"];
         keys.forEach(Lang.bind(this, function (key) {
             let prop = "_" + key.replace(/-/g, "_");
             this.settings.bindProperty(Settings.BindingDirection.IN, key, prop,
@@ -42,19 +44,30 @@ AnimeClockDesklet.prototype = {
 
     _buildUI: function () {
         this._mainBox = new St.BoxLayout({
-            vertical: true,
+            vertical: false,
             style_class: "anime-clock-box"
         });
+
+        let spritePath = this.metadata.path + "/sprite.svg";
+        this._spriteIcon = new St.Icon({
+            gicon: new Gio.FileIcon({ file: Gio.File.new_for_path(spritePath) }),
+            style_class: "anime-clock-sprite"
+        });
+
+        this._clockBox = new St.BoxLayout({ vertical: true });
 
         this._topDecor = new St.Label({ style_class: "anime-clock-decor" });
         this._timeLabel = new St.Label({ style_class: "anime-clock-time" });
         this._dateLabel = new St.Label({ style_class: "anime-clock-date" });
         this._bottomDecor = new St.Label({ style_class: "anime-clock-decor" });
 
-        this._mainBox.add(this._topDecor, { x_align: St.Align.MIDDLE });
-        this._mainBox.add(this._timeLabel, { x_align: St.Align.MIDDLE });
-        this._mainBox.add(this._dateLabel, { x_align: St.Align.MIDDLE });
-        this._mainBox.add(this._bottomDecor, { x_align: St.Align.MIDDLE });
+        this._clockBox.add(this._topDecor, { x_align: St.Align.MIDDLE });
+        this._clockBox.add(this._timeLabel, { x_align: St.Align.MIDDLE });
+        this._clockBox.add(this._dateLabel, { x_align: St.Align.MIDDLE });
+        this._clockBox.add(this._bottomDecor, { x_align: St.Align.MIDDLE });
+
+        this._mainBox.add(this._spriteIcon, { y_align: St.Align.MIDDLE });
+        this._mainBox.add(this._clockBox, { y_align: St.Align.MIDDLE });
 
         this.setContent(this._mainBox);
     },
@@ -62,6 +75,9 @@ AnimeClockDesklet.prototype = {
     _applySettings: function () {
         this._topDecor.set_text(this._top_decor);
         this._bottomDecor.set_text(this._bottom_decor);
+
+        this._spriteIcon.visible = this._show_sprite;
+        this._spriteIcon.icon_size = this._sprite_size;
 
         this._mainBox.set_style(
             "background-color: " + this._hexToRgba(this._bg_color, 0.78) + ";" +
@@ -71,7 +87,7 @@ AnimeClockDesklet.prototype = {
         this._timeLabel.set_style(
             "font-size: " + this._time_font_size + "px;" +
             "color: " + this._accent_color + ";" +
-            "text-shadow: 0px 0px 8px " + this._accent_color + ", 0px 0px 16px " + this._glow_color + ";"
+            "text-shadow: 0px 0px 12px " + this._glow_color + ";"
         );
 
         this._dateLabel.set_style(

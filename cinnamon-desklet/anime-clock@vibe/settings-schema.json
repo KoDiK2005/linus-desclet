@@ -38,6 +38,24 @@
         "default": "#180a28",
         "description": "Цвет фона"
     },
+    "sprite-section": {
+        "type": "header",
+        "name": "Персонаж"
+    },
+    "show-sprite": {
+        "type": "checkbox",
+        "default": true,
+        "description": "Показывать спрайт персонажа"
+    },
+    "sprite-size": {
+        "type": "spinbutton",
+        "default": 120,
+        "min": 60,
+        "max": 240,
+        "step": 4,
+        "units": "px",
+        "description": "Размер спрайта"
+    },
     "text-section": {
         "type": "header",
         "name": "Текст"
@@ -47,6 +65,7 @@
         "default": 40,
         "min": 16,
         "max": 96,
+        "step": 2,
         "units": "px",
         "description": "Размер шрифта часов"
     },
