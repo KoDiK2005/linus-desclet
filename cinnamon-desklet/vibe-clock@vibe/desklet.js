@@ -20,7 +20,7 @@ const MONTHS_SHORT_RU = ["ЯНВ", "ФЕВ", "МАР", "АПР", "МАЙ", "ИЮ
 
 // Every style is described declaratively here so adding a new one
 // doesn't require touching the build/apply logic below.
-const ANIME_CHARACTERS = ["sakura", "luna", "miko", "yuki"];
+const ANIME_CHARACTERS = ["sakura", "luna", "miko", "yuki", "hana", "rei", "momo"];
 
 const STYLES = {
     anime: {
